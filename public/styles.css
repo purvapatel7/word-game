@@ -1,0 +1,138 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --background-color: #ecf0f1;
+  --text-color: #34495e;
+  --border-color: #bdc3c7;
+  --imposter-color: #e74c3c;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+}
+
+h1, h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+input[type="text"], button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#roomCodeDisplay {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+#playersList, #messages, #playerListForVote {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+#playersList li, #messages li, #playerListForVote li {
+  background-color: #f8f9fa;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#messages {
+  height: 200px;
+  overflow-y: auto;
+  border: 1px solid var(--border-color);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#wordDisplay {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 4px;
+}
+
+#playerListForVote li {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#playerListForVote li:hover {
+  background-color: #e9ecef;
+}
+
+#playerListForVote li[style*="pointer-events: none"] {
+  background-color: #dee2e6;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+#resultContainer {
+  background-color: #f8f9fa;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+#resultContainer p {
+  margin-bottom: 0.5rem;
+}
+
+#resultContainer p:nth-child(3) {
+  font-weight: bold;
+  color: var(--imposter-color);
+}
+
+#nextRoundButton {
+  background-color: var(--secondary-color);
+  margin-top: 1rem;
+}
+
+#nextRoundButton:hover {
+  background-color: #27ae60;
+}

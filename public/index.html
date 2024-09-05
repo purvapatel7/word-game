@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Imposter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="nameContainer">
+            <h1>Welcome to The Imposter</h1>
+            <input id="playerNameInput" type="text" placeholder="Enter your name">
+            <button id="createRoomButton">Create Room</button>
+            <button id="joinRoomButton">Join Room</button>
+            <input id="roomCodeInput" type="text" placeholder="Enter room code" style="display: none;">
+        </div>
+
+        <div id="waitingContainer" style="display: none;">
+            <h2>Waiting for players...</h2>
+            <div id="roomCodeDisplay"></div>
+            <ul id="playersList"></ul>
+            <button id="startGameButton" style="display: none;">Start Game</button>
+        </div>
+
+        <div id="gameContainer" style="display: none;">
+            <h1>The Imposter</h1>
+            <div id="playerNameDisplay"></div>
+            <div id="wordDisplay"></div>
+            <input id="sentenceInput" type="text" placeholder="Enter your sentence">
+            <button id="sendButton">Send</button>
+            <button id="callVoteButton">Call Vote</button>
+            <ul id="messages"></ul>
+            <div id="voteContainer" style="display: none;">
+                <h2>Vote for the Imposter</h2>
+                <ul id="playerListForVote"></ul>
+            </div>
+            <div id="votesDisplay"></div>
+            <div id="resultContainer" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
